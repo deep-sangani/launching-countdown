@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+ *{
+     padding: 0%;
+     margin: 0%;
+     box-sizing: border-box;
+ }
+
+:root{
+    --primary:#24232d;
+}
+body{
+    font-family: "Red Hat Text";
+}
+
+.main{
+    background-image: url("./assets/bg-stars.svg");
+    height: 70vh;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .heading h1{
+    color: white;
+    letter-spacing: 10px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main .heading .display .card-wrap h2{
+    text-align: center;
+    color: #7e7e9b;
+    letter-spacing: 10px;
+    font-size: 15px;
+      margin-left: 10px;
+}
+.main .heading .display .card{
+    height: 200px;
+    width: 200px;
+    background-color: #2e2e41;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    color: #d54f70;
+    position: relative;
+    transform: scale(0.8);
+    border-radius: 10px;
+    box-shadow: 3px 13px 15px -5px rgba(0,0,0,0.61);
+    overflow: hidden;
+}
+
+.mask{
+    position: absolute;
+    height: 103px;
+    width: 100%;
+    top: 0;
+    background-color:rgba(0, 0,0, 0.2);
+     border-radius: 10px;
+}
+
+.main .heading .display .card::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #24232d;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    margin-left: -5px;
+    z-index: 5;
+   
+
+}
+.main .heading .display {
+    display: flex;
+}
+.main .heading .display > *+*{
+    margin-left: 20px;
+}
+
+.main .heading .display .card::after{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #24232d;
+    position: absolute;
+    right: 0;
+    border-radius: 10px;
+    margin-right: -5px;
+}
+
+footer{
+  background-image: url("./assets//pattern-hills.svg");
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--primary);
+}
+
+.btns{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 100px 5px;
+       border-radius: 7px;
+     
+}
+#submit-btn,#clr-btn{
+ 
+    padding: 7px;
+    font-size: 20px;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid #d54f70 ;
+    color: white;
+    cursor: pointer;
+     margin-left: 20px;
+     width: 100px;
+}
+#submit-btn:hover{
+    transform: scale(1.1);
+}
+#clr-btn:hover{
+    transform: scale(1.1);
+}
+input{
+    background-color: transparent;
+    color: white;
+     border: 2px solid #f857a6 ;
+     font-size: 20px;
+       border-radius: 5px;
+       padding: 2px;
+      
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    font-size: 30px;
+  
+}
